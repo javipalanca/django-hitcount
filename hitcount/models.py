@@ -195,3 +195,7 @@ class HitCountMixin(object):
         hit_count, created = HitCount.objects.get_or_create(
             content_type=ctype, object_pk=self.pk)
         return hit_count
+
+    class Meta:
+        abstract = True
+
